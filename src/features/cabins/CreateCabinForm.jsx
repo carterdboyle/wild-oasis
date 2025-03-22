@@ -40,7 +40,10 @@ function CreateCabinForm({ cabinToUpdate = {}, onCloseModal }) {
       createCabin(
         { ...data, image },
         {
-          onSuccess: () => reset(),
+          onSuccess: () => {
+            reset();
+            onCloseModal?.();
+          },
         }
       );
   }
