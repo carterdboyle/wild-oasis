@@ -2,10 +2,8 @@ import supabase from "./supabase";
 import { supabaseUrl } from "./supabase";
 
 export async function getCabins() {
-  const { data, error } = await supabase
-    .from("cabins")
-    .select("*")
-    .order("name", { ascending: true });
+  const { data, error } = await supabase.from("cabins").select("*");
+  // remove ordering here
 
   if (error) {
     console.error(error);

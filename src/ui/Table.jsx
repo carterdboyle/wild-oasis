@@ -63,8 +63,6 @@ const Empty = styled.p`
 const TableContext = createContext();
 
 function Table({ columns, children }) {
-  console.log(columns);
-
   return (
     <TableContext.Provider
       value={{
