@@ -37,7 +37,7 @@ function CheckinBooking() {
 
   const moveBack = useMoveBack();
 
-  if (isLoading || isLoadingSettings) return <Spinner />;
+  if (isLoading || isLoadingSettings || isCheckingIn) return <Spinner />;
 
   const {
     id: bookingId,
@@ -49,7 +49,7 @@ function CheckinBooking() {
   } = booking;
 
   const optionalBreakfastPrice =
-    settings.breakfastPrice * numNights * numGuests;
+    settings?.breakfastPrice * numNights * numGuests;
 
   function handleCheckin() {
     if (!confirmPaid) return;
