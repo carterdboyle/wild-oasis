@@ -11,7 +11,7 @@ export function useDeleteCabin() {
       toast.success("Cabin successfully deleted!");
 
       queryClient.invalidateQueries({
-        queryKey: "cabins",
+        queryKey: ["cabins"],
       });
     },
     onError: (err) => toast.error(err.message),

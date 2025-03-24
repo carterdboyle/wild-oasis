@@ -21,7 +21,7 @@ function Sidebar() {
       <Logo />
       <MainNav />
 
-      <Uploader />
+      {/* <Uploader /> // Test data*/}
     </StyledSidebar>
   );
 }
