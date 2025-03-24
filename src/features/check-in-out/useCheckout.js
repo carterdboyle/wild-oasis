@@ -11,7 +11,7 @@ export function useCheckout() {
         status: "checked-out",
       }),
     onSuccess: (data) => {
-      toast.success(`Booking #${data.id} successfully checkin in`);
+      toast.success(`Booking #${data.id} successfully checked out`);
       queryClient.invalidateQueries({ active: true }); //invalidate
     },
     onError: () => toast.error("There was an error while checking out"),

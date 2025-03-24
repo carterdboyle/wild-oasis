@@ -20,8 +20,8 @@ function Sidebar() {
     <StyledSidebar>
       <Logo />
       <MainNav />
-
-      {/* <Uploader /> // Test data*/}
+      <Uploader />
+      {/* // Test data */}
     </StyledSidebar>
   );
 }
