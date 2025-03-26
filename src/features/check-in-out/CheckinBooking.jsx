@@ -6,6 +6,7 @@ import Heading from "../../ui/Heading";
 import ButtonGroup from "../../ui/ButtonGroup";
 import Button from "../../ui/Button";
 import ButtonText from "../../ui/ButtonText";
+import Empty from "../../ui/Empty";
 
 import { useMoveBack } from "../../hooks/useMoveBack";
 import { useBooking } from "../bookings/useBooking";
@@ -34,8 +35,9 @@ function CheckinBooking() {
   const { settings, isLoadingSettings } = useSettings();
 
   useEffect(() => setConfirmPaid(booking?.isPaid ?? false), [booking]);
-
   const moveBack = useMoveBack();
+
+  if (booking === undefined) return <Empty resourceName="booking" />;
 
   if (isLoading || isLoadingSettings || isCheckingIn) return <Spinner />;
 
