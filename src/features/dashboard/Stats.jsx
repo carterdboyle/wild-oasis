@@ -16,9 +16,11 @@ function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
   // 4. Occupancy rate
   // num nights checked in / all available nights
   const occupancyRate =
-    confirmedStays.reduce((acc, cur) => acc + cur.numNights, 0) /
-    numDays /
-    cabinCount;
+    numDays * cabinCount === 0
+      ? 0
+      : confirmedStays.reduce((acc, cur) => acc + cur.numNights, 0) /
+        numDays /
+        cabinCount;
 
   return (
     <>
