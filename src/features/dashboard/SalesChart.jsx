@@ -92,7 +92,7 @@ function SalesChart({ bookings, numDays }) {
             stroke={colors.extrasSales.stroke}
             fill={colors.extrasSales.fill}
             strokeWidth={2}
-            name="Total sales"
+            name="Extras sales"
             unit="$"
           />
         </AreaChart>
