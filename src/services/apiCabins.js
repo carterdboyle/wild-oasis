@@ -24,8 +24,6 @@ export async function createUpdateCabin(newCabin, id) {
     ? newCabin.image
     : `${supabaseUrl}/storage/v1/object/public/cabin-images/${imageName}`;
 
-  // https://wdoxacjdxsgcaskrjkkp.supabase.co/storage/v1/object/public/cabin-images//cabin-001.jpg
-
   // 1. Create/update cabin
   let query = supabase.from("cabins");
 
