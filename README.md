@@ -6,6 +6,8 @@ Built with Vite and manages remote states with Tanstack Query. If you want to ru
 
 I used the supabase API for the back-end. Create the desired RLS policies in supabase and create authenticated users. Note the files in the `components` folder to see how the data is structured. Supabase buckets were used to store the images and user avatars if they were modified. The initial data is retrieved from the static server instance. 
 
+![image](https://github.com/user-attachments/assets/03764d3d-d31e-4ee3-a413-5be9eac6fb3f)
+
 # Installation
 
 Clone the repo and run `npm install` to install dependencies. Afterwards, run `npm run dev` to run the server instance. 
