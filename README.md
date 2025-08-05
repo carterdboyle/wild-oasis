@@ -17,6 +17,8 @@ Clone the repo and run `npm install` to install dependencies. Afterwards, run `n
 If using the deployment at vercel, https://wild-oh-asis.vercel.app, the login information is username: `admin@wild-oasis.com` password: `pass1234`. 
 This application is the companion application to [The Wild Oasis Website](https://the-wild-oh-asis-website.vercel.app/) Next.js SSR website where guests make the bookings. This SPA app is for the workers at the cabin to manage the bookings. 
 
+The Sidebar on the left has a button to refresh the data so you can see what it looks like when it's up to date.
+
 # Features
 
 - Edit and add cabins, with a duplication feature
