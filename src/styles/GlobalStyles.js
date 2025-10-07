@@ -223,6 +223,29 @@ const GlobalStyles = createGlobalStyle`
     --image-grayscale: 10%;
     --image-opacity: 90%;
     */
+
+    /* --- Desktop Gate globals --- */
+    html.mobile-locked,
+    body.mobile-locked {
+        min-width: 1200px;     /* force desktop width on phones/tablets */
+        overflow-x: auto;      /* allow horizontal scroll instead of shrinking */
+    }
+
+    /* While the banner is visible, we push the content down. The component
+        will also compute the exact height and add it to the *existing* top
+        padding so you keep your base 3rem + banner height. */
+    html.dg-open body {
+        /* fallback value; JS will set an exact px value */
+        padding-top: 44px;
+    }
+
+    /* Don’t show the banner on real desktops / in print */
+    @media (min-width: 1024px) {
+        #desktop-gate { display: none !important; }
+    }
+    @media print {
+        #desktop-gate { display: none !important; }
+    } 
 `;
 
 export default GlobalStyles;
